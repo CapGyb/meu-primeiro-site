@@ -1,0 +1,244 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3d3040;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 220, 235, 0.35),
+            rgba(210, 240, 210, 0.35)
+        ),
+        url("sakura.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+
+    /* Faz o conteúdo ocupar toda a altura da tela */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==============================
+   HEADER / NAVBAR
+   ============================== */
+
+header {
+    background: rgba(235, 102, 164, 0.8);
+
+    border-bottom: 3px solid #e88bb4;
+
+    padding: 20px 50px;
+
+    box-shadow: 0 4px 15px rgba(120, 70, 90, 0.25);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    backdrop-filter: blur(8px);
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 28px;
+    color: #fdfdfd;
+
+    text-shadow:
+        2px 2px 0 #b85f88,
+        4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+
+    font-weight: bold;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #fa912f;
+    color: #d8679a;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   MAIN
+   ============================== */
+
+main {
+    max-width: 1100px;
+    width: 100%;
+
+    margin: 50px auto;
+    padding: 0 25px;
+
+    /*
+       Faz o main ocupar o espaço disponível
+       entre o header e o footer.
+    */
+    flex: 1;
+}
+
+
+/* ==============================
+   SEÇÕES
+   ============================== */
+
+section {
+    background: rgba(248, 182, 226, 0.78);
+
+    margin-bottom: 30px;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 2px solid rgba(224, 48, 125, 0.7);
+
+    box-shadow:
+        0 8px 25px rgba(100, 70, 80, 0.20);
+
+    backdrop-filter: blur(5px);
+
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(156, 113, 128, 0.28);
+}
+
+
+/* ==============================
+   TÍTULOS
+   ============================== */
+
+section h2 {
+    color: #ad3b71;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+section p {
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   LISTA DE FUNCIONALIDADES
+   ============================== */
+
+section ul {
+    margin-top: 15px;
+
+    padding-left: 25px;
+}
+
+section li {
+    margin-bottom: 10px;
+
+    font-size: 17px;
+}
+
+
+/* ==============================
+   TEXTOS MEME
+   ============================== */
+
+section:first-child {
+    text-align: center;
+
+    padding: 60px 30px;
+}
+
+section:first-child h2 {
+    font-size: 50px;
+
+    color: #1612ee;
+
+    text-shadow:
+        3px 4px 0 #04d615,
+        6px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+section:first-child p {
+    color: #5b4050;
+
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background: rgba(233, 0, 136, 0.671);
+
+    color: #e6a6a6;
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 3px solid #8b184a;
+
+    /*
+       Não precisamos mais de margin-top.
+       O flex: 1 do main empurra o footer
+       para o final da página.
+    */
+}
+
+footer p {
+    font-size: 15px;
+}
